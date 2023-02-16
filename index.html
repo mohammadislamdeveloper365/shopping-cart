@@ -5,10 +5,70 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping Cart</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="./images/shopping-cart .png" type="image/x-icon">
     <link rel="stylesheet" href="./stylesheet/index.css">
+    <script src="https://kit.fontawesome.com/4771d5cd20.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    
+    <header class="shopping-cart header text-center mt-8 mb-3">
+        <h1>
+            Shopping Cart
+        </h1>
+    </header>
+    <main>
+        <section class="shopping-cart-container">
+            <div class="shopping-cart-box mb-1 d-flex align-items-center">
+                <div class="shopping-img-container">
+                    <img class="shopping-img" src="./images/tv.png" alt="tv image">
+                </div>
+                <div class="shopping-item-name">
+                    ABC TV
+                </div>
+                <div class="shopping-item-number d-flex">
+                    <button class="btn-decrement">-</button>
+                    <input type="text" class="item-number text-center" value="1">
+                    <button class="btn-increment">+</button>
+                    <div class="d-flex align-items-center price-container">$<span>450</span></div>
+                    <i class="fa-solid fa-xmark d-flex align-items-center"></i>
+                </div>
+            </div>
+            <div class="shopping-cart-box mb-1 d-flex align-items-center">
+                <div class="shopping-img-container">
+                    <img class="shopping-img" src="./images/tv-stand.png" alt="tv image">
+                </div>
+                <div class="shopping-item-name">
+                    ABC TV Stand
+                </div>
+                <div class="shopping-item-number d-flex">
+                    <button class="btn-decrement">-</button>
+                    <input type="text" class="item-number text-center" value="1" >
+                    <button class="btn-increment">+</button>
+                    <div class="d-flex align-items-center price-container">$<span>20</span></div>
+                    <i class="fa-solid fa-xmark d-flex align-items-center"></i>
+                </div>
+            </div>
+            <div class="shopping-cart-box mb-1 d-flex">
+                <div class="total-price-name">
+                    <p class="mb-1">Sub Total :</p>
+                    <p class="mb-1">VAT(6%) :</p>
+                    <p class="mb-1">Total :</p>
+                </div>
+                <div class="total-price">
+                    <p class="mb-1">
+                        520
+                    </p>
+                    <p class="mb-1">
+                        100
+                    </p>
+                    <p class="mb-1">
+                        100
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
