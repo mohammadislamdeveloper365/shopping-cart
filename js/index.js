@@ -1,22 +1,8 @@
-function getElement(id) {
-    return document.getElementById(id);
-}
-
-function getInputValue(id) {
-    return getElement(id).value; 
-}
-
-function getFieldValue(id) {
-    return getElement(id).innerText;
-}
-
-function getNumberValue(value) {
-    return parseFloat(value);
-}
+import { getElement, getNumberValue } from './utilities.js';
 
 function changeNumber(id,isIncrement) {
     let tvNumberField = getElement(id);
-    let numberOfTv = getNumberValue(getInputValue(id));
+    let numberOfTv = getNumberValue(id, true);
     if(isIncrement) {
         tvNumberField.value = ++numberOfTv;
     }
@@ -30,14 +16,14 @@ function changeNumber(id,isIncrement) {
 
 function setTotalPrice(itemPrice, itemNumberId, itemPriceId) {
     let price = itemPrice;
-    let numberOfItem = getNumberValue(getInputValue(itemNumberId))
+    let numberOfItem = getNumberValue(itemNumberId, true)
     let itemField = getElement(itemPriceId);
     itemField.innerText = price * numberOfItem;
 }
 
 function setPrice (tvPriceId, tvStandPriceId) {
-    let tvPrice = getNumberValue(getFieldValue(tvPriceId));
-    let tvStandPrice = getNumberValue(getFieldValue(tvStandPriceId));
+    let tvPrice = getNumberValue(tvPriceId);
+    let tvStandPrice = getNumberValue(tvStandPriceId);
     let subTotalField = getElement('sub-total');
     subTotalField.innerText = tvPrice + tvStandPrice;
 
@@ -45,10 +31,11 @@ function setPrice (tvPriceId, tvStandPriceId) {
     vatField.innerText = (0.06 * (tvPrice + tvStandPrice)).toFixed(2);
 
     let totalField = getElement('total');
-    totalField.innerText = getNumberValue(getFieldValue('sub-total')) + getNumberValue(getFieldValue('vat'))
+    totalField.innerText = getNumberValue('sub-total') + getNumberValue('vat')
 }
 
 setPrice('tv-price','tv-stand-price');
+
 getElement("btn-tv-plus").addEventListener('click', function() {
     changeNumber('tv-number',true);
     setTotalPrice(450, 'tv-number', 'tv-price');
