@@ -15,8 +15,8 @@ function getFieldValue(id, isInput = false) {
 }
 
 function getNumberValue(id, isInput = false) {
-    return getFieldValue(id, isInput);
+    return parseFloat(getFieldValue(id, isInput));
 }
 
 
-export { getElement, getFieldValue, getNumberValue };
+export { getElement, getNumberValue };

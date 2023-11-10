@@ -98,6 +98,18 @@ h1 {
     width:70%;
 }
 
+#btn-checkout-container {
+    text-align: right;
+}
+
+#checkout-btn {
+    padding: 1rem 1.5rem;
+    background-color: rgb(237, 188, 27);
+    border:none;
+    border-radius: 8px;
+    font-size: 1.25rem;
+    color:white;
+}
 @media only screen and (min-width:1px) {
     :root {
         font-size: 60%;
