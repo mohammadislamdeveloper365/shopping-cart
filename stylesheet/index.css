@@ -19,6 +19,13 @@ body {
 h1 {
     font-size: 3.5rem;
 }
+
+.primary-bg {
+
+}
+.primary-txt {
+    color:blue;
+}
 .text-center {
     text-align:center;
 }
@@ -34,9 +41,13 @@ h1 {
 .mb-1 {
     margin-bottom:1rem;
 }
-.shopping-cart-container {
-    padding: 2rem 5rem;
+
+.primary-bg {
     background-color: rgb(57, 68, 247,0.5);
+}
+
+#shopping-cart-container {
+    padding: 2rem 5rem;
     max-width: 768px;
     margin:auto;
 }
